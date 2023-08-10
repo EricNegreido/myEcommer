@@ -5,7 +5,8 @@ import { NavBar } from './components/NavBar';
 function App() {
   return ( <> 
           <NavBar></NavBar>
-          <ItemListContainer greeting="BIENVENIDOS A MI ECOMMER "> </ItemListContainer>
+          <ItemListContainer greeting="BIENVENIDOS A MI ECOMMER "> 
+          </ItemListContainer>
           </>
   ) 
 }
