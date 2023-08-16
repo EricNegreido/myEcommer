@@ -1,17 +1,20 @@
 import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
 import { ItemCount } from './ItemCount';
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import { Button} from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
+import { CartContext } from './context/CartContext';
 
 
 
 export const ItemDetail = (item) => {
   const [quantity, setQuantity] = useState(0);
+  const {addItem} = useContext(CartContext)
+
   const handleOnAdd = (quantity) =>{
     setQuantity(quantity);
-    console.log(quantity)
+    addItem(item, quantity)
 
   }
   
