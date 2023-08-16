@@ -4,14 +4,15 @@ import { ItemDetailContainer } from './ItemDetailContainer';
 import { useState } from 'react';
 
 
-export const Item = ({ clothes }) => {
+export const Item = ({ product}) => {
   const[showDetails, setShowDetails] = useState(false);
+  
   const handleDetailsClick = () => {
     setShowDetails(showDetails ? false : true)
   }
+  
     return (
       <>
-      {clothes.map(product => (
       <Card key={product.id} style={{ width: '18rem' }}>
         <Card.Img variant="top" src="https://a-static.besthdwallpaper.com/one-piece-monkey-d-luffy-gear-5-awakening-joy-boy-wallpaper-1440x1080-95711_22.jpg" />
         <Card.Body>
@@ -24,5 +25,5 @@ export const Item = ({ clothes }) => {
         <Button onClick={ handleDetailsClick}>DETALLES</Button>
         {showDetails && <ItemDetailContainer itemId={product.id}/>} 
       </Card>
-  ))}</>)
+  </>)
 }
