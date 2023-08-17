@@ -31,7 +31,7 @@ export const ItemDetail = (item) => {
             quantity > 0 ? ( 
               <NavLink to='/cart' className='option'> <Button> TERMINAR COMPRA </Button></NavLink>
             ) : (
-              <ItemCount initial={1} stock={item.stock} onAdd={handleOnAdd} />
+              <ItemCount stock={item.stock} onAdd={handleOnAdd} />
               )
           }
           </ListGroup.Item>
